@@ -4,11 +4,11 @@ export { }
 
 declare function require(path: string): any;
 let fs = require('fs');
-let boxInput: string = '';
-let boxInputArr: string[] = [];
+let input: string = '';
+let inputToArray: string[] = [];
 
-boxInput = fs.readFileSync('boxinput.txt', 'utf-8');
+input = fs.readFileSync('day07/assmblInput.txt', 'utf-8');
 
-boxInputArr = boxInput.split('\r\n');
+inputToArray = input.split('\r\n');
 
-fs.writeFileSync('boxInput.ts', JSON.stringify(boxInputArr));
+fs.writeFileSync('day07/assmblInput.ts', JSON.stringify(inputToArray));
